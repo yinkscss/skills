@@ -1,0 +1,12 @@
+{
+  "name": "langchain-langgraph-agent",
+  "version": "1.0.0",
+  "description": "Advanced LangGraph agent with state management",
+  "main": "graph_agent.py",
+  "dependencies": {
+    "langchain": "^0.1.0",
+    "langchain-openai": "^0.0.5",
+    "langgraph": "^0.0.30",
+    "python-dotenv": "^1.0.0"
+  }
+}

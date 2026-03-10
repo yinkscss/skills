@@ -1,0 +1,12 @@
+{
+  "name": "langchain-simple-agent",
+  "version": "1.0.0",
+  "description": "Simple LangChain agent with tools",
+  "main": "agent.py",
+  "dependencies": {
+    "langchain": "^0.1.0",
+    "langchain-openai": "^0.0.5",
+    "langchain-community": "^0.0.20",
+    "python-dotenv": "^1.0.0"
+  }
+}

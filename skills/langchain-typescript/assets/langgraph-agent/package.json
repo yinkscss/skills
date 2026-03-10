@@ -1,0 +1,22 @@
+{
+  "name": "langgraph-agent",
+  "version": "1.0.0",
+  "description": "A LangGraph-based agent with state management",
+  "main": "graph-agent.ts",
+  "scripts": {
+    "dev": "tsx graph-agent.ts",
+    "build": "tsc",
+    "start": "node dist/graph-agent.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.0",
+    "@langchain/openai": "^0.3.0",
+    "@langchain/langgraph": "^0.2.0",
+    "@langchain/community": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}

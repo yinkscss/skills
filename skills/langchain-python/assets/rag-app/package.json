@@ -1,0 +1,13 @@
+{
+  "name": "langchain-rag-app",
+  "version": "1.0.0",
+  "description": "RAG (Retrieval-Augmented Generation) application",
+  "main": "rag_app.py",
+  "dependencies": {
+    "langchain": "^0.1.0",
+    "langchain-openai": "^0.0.5",
+    "langchain-community": "^0.0.20",
+    "faiss-cpu": "^1.7.4",
+    "python-dotenv": "^1.0.0"
+  }
+}

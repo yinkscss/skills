@@ -1,0 +1,21 @@
+{
+  "name": "rag-application",
+  "version": "1.0.0",
+  "description": "Retrieval-Augmented Generation application with LangChain",
+  "main": "rag.ts",
+  "scripts": {
+    "dev": "tsx rag.ts",
+    "build": "tsc",
+    "start": "node dist/rag.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.0",
+    "@langchain/openai": "^0.3.0",
+    "langchain": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
