@@ -23,6 +23,8 @@ The foundation layer ("The Syntax") of the AI Engineering Stack. Prompt engineer
 | Tool integration | ART | [Techniques](references/techniques.md#automatic-reasoning-and-tool-use-art) |
 | Multi-step workflows | Prompt Chaining | [Techniques](references/techniques.md#prompt-chaining) |
 | Iterative improvement | Reflexion | [Techniques](references/techniques.md#reflexion) |
+| Strategic framing | Question Stacking | [Question Stacking](references/question-stacking.md) |
+| Complex scoping | Socratic Meta-Prompt | [Question Stacking](references/question-stacking.md#advanced-application-the-socratic-meta-prompt) |
 
 ## Core Prompt Writing Rules
 
@@ -126,6 +128,42 @@ Maintain a tree of thoughts, exploring multiple reasoning paths systematically. 
 
 ### Program-Aided Language Models (PAL)
 Generate programs as reasoning steps. Use for mathematical problems, algorithmic tasks, data manipulation.
+
+## Question Stacking & Socratic Techniques
+
+Instead of asking AI for output directly, first ask it to surface the right questions — then answer them — then execute. This forces the model to adopt expert framing before generating, reducing shallow or misaligned outputs.
+
+**The Pattern:**
+```
+"What would a [expert role] ask before [doing task]?
+What information would they need?
+What assumptions would they validate first?
+Now answer those questions for [specific context], then [execute task]."
+```
+
+**Use question stacking for:**
+- Strategic planning and system design
+- Architecture decisions with tradeoffs
+- Creative problem solving
+- Multi-step reasoning tasks
+- Any task where wrong framing kills the output
+
+**Skip it for:**
+- Simple factual queries
+- Data formatting and transformation
+- Basic code generation with a clear spec
+
+**The Socratic Meta-Prompt** takes this further: a full reusable system prompt that operationalizes question stacking as a structured intake workflow. The model interrogates the request through three lenses — ambiguity detection (INTERROGATOR), assumption auditing (LOGIC TESTER), and constraint definition (CONSTRAINT MANAGER) — before executing.
+
+| Prompt Type | When to Use | Expected Gain |
+|---|---|---|
+| Direct instruction | Clear, bounded tasks | Speed |
+| Question stacking | Strategic or multi-step tasks | Better framing |
+| Socratic meta-prompt | Complex scoping sessions | Precision + reduced rework |
+
+> The quality of AI output is limited by the quality of the frame you give it. Question stacking forces the model to build the right frame before it builds anything else.
+
+**See [Question Stacking & Socratic Techniques](references/question-stacking.md) for the full pattern, domain-specific examples (strategy, engineering, code review), and the complete Socratic Meta-Prompt system prompt.**
 
 ## Advanced Techniques
 
@@ -301,6 +339,7 @@ For detailed information on specific topics:
 - **[Applications Guide](references/applications.md)** — Detailed patterns for fine-tuning, research, document processing, code generation, etc.
 - **[Risk Management](references/risks.md)** — Comprehensive strategies for prompt injection, hallucinations, biases, and quality issues
 - **[Model Guide](references/models.md)** — Model-specific considerations, selection, and optimization strategies
+- **[Question Stacking & Socratic Techniques](references/question-stacking.md)** — Question stacking pattern, domain examples, Socratic Meta-Prompt, and usage decision framework
 
 ## Related Skills
 
